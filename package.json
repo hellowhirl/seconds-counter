@@ -1,0 +1,17 @@
+{
+  "name": "seconds-counter",
+  "version": "0.0.1",
+  "description": "game and see how close you can get to counting a second!",
+  "main": "index.js",
+  "repository": "https://github.com/hellowhirl/seconds-counter",
+  "author": "hellowhirl <anthony.p.avila@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.5"
+  },
+  "scripts": {
+    "preinstall": "(npm list webpack -g || npm install webpack -g) && (npm list webpack-dev-server -g || npm install webpack-dev-server -g)",
+    "start": "webpack-dev-server --progress --colors"
+  }
+}
