@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <p>Press 'spacebar' to see current time</p>
-    <p id="demo"></p>
-  </body>
-</html>
-
-<script>
 // My clock version
 function JSClock() {
   var time = new Date();
@@ -35,9 +22,12 @@ function JSClock() {
   return temp;
 }
 
-document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
-        document.getElementById("demo").innerHTML = JSClock();
+module.exports = {
+  start: function() {
+    document.body.onkeyup = function(e){
+        if(e.keyCode == 32){
+            document.getElementById("demo").innerHTML = JSClock();
+        }
     }
-}
-</script>
+  }
+};
